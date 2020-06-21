@@ -27,14 +27,14 @@ openssl x509 -req -in ./server/server.csr -CA ./rootCA/rootCA.pem -CAkey ./rootC
 
 ## The referenced v3.ext file should look something like this:
 
-authorityKeyIdentifier=keyid,issuer
-basicConstraints=CA:FALSE
-keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
-subjectAltName = @alt_names
-[alt_names]
-DNS.1 = localhost
-DNS.2 = demobackend-site.dev
-DNS.3 = demobackend-rest.dev
+authorityKeyIdentifier=keyid,issuer  
+basicConstraints=CA:FALSE  
+keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment  
+subjectAltName = @alt_names  
+[alt_names]  
+DNS.1 = localhost  
+DNS.2 = demobackend-site.dev  
+DNS.3 = demobackend-rest.dev  
 
 ## Concat server certificate + rootCA
 
