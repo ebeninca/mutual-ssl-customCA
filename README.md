@@ -48,7 +48,7 @@ cat ./server/server.pem ./rootCA/rootCA.pem > ./server/serverChain.cer
 
 ## In order to bundle the server certificate and private key into a single file the following command needs to be executed:
 
-Certificado completo (chave + certificado + CA), este formato server para importacao via portecle (import key pair):
+Certificado completo (chave + certificado + CA), este formato serve para importacao via portecle (import key pair):
 openssl pkcs12 -export -in ./server/server.pem -passin pass:123456 -passout pass:123456 -inkey ./server/server.key -chain -CAfile ./server/serverChain.cer -out ./server/server.pkcs12
 
 openssl pkcs12 -inkey ./server/server.key -in ./server/server.pem -export -out ./server/server.pfx
